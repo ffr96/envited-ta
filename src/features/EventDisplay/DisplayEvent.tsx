@@ -28,11 +28,12 @@ export const DisplayEvent = ({ children, ...event }: EventDetails) => {
     <div>
       {children}
       <div
-        className='flex flex-col lg:flex-row justify-center text-4xl
-      items-center text-textMain font-helvetica mt-10'
+        className='flex md:flex-col lg:flex-row justify-center text-4xl
+      items-center text-textMain font-helvetica lg:mt-10'
         id={`event-display`}
       >
-        <div className='flex flex-col font-bold lg:mr-10'>
+        <div className='flex flex-col text-center lg:text-left lg:flex-col font-bold lg:mr-10'>
+          <img src={birthdayCake} className='w-[340px] md:hidden ' />
           <h1>
             {event.eventName}
             <br></br>{' '}
@@ -53,7 +54,7 @@ export const DisplayEvent = ({ children, ...event }: EventDetails) => {
             <GoLocation className='mr-3' /> {event.location}
           </div>
         </div>
-        <img src={birthdayCake} width={500} />
+        <img src={birthdayCake} className='md:w-[500px] hidden md:flex ' />
       </div>
     </div>
   );

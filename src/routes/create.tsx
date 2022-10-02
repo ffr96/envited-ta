@@ -26,21 +26,24 @@ const CreatePage = () => {
     <div className='min-h-screen w-full flex flex-col justify-center items-center'>
       {(isConfirmed && (
         <DisplayEvent {...form}>
-          {' '}
-          <Button
-            buttonType='danger'
-            className='p-1 text-sm'
-            onClick={() => setIsConfirmed(false)}
-          >
-            Edit
-          </Button>
-          <Button
-            buttonType='light'
-            className='p-1 mx-12 text-sm'
-            onClick={submitForm}
-          >
-            Confirm
-          </Button>{' '}
+          <div className='flex flex-row mt-4 p-4 items-center justify-center'>
+            <Button
+              buttonSize='sm'
+              buttonType='danger'
+              className='p-1 text-sm'
+              onClick={() => setIsConfirmed(false)}
+            >
+              Edit
+            </Button>
+            <Button
+              buttonSize='sm'
+              buttonType='light'
+              className='p-1 lg:mx-12 text-sm'
+              onClick={submitForm}
+            >
+              Confirm
+            </Button>
+          </div>
         </DisplayEvent>
       )) || (
         <EventForm

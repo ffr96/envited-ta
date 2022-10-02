@@ -4,9 +4,9 @@ import landing from '@/assets/landing-page.svg';
 
 const Landing = () => {
   return (
-    <div className='flex flex-col items-center lg:flex-row h-full w-full justify-around mt-20'>
+    <div className='flex flex-col-reverse items-center lg:flex-row h-full w-full justify-around lg:mt-20'>
       <div className=''>
-        <img src={landing} width={440} />
+        <img src={landing} className='w-[185px] lg:w-[440px]' />
       </div>
       <div className='flex flex-col justify-end items-center lg:items-end text-center lg:text-right lg:px-20'>
         <h1 className='text-6xl font-bold'>
@@ -22,7 +22,7 @@ const Landing = () => {
           </p>
         </h1>
 
-        <Button>
+        <Button className='mb-4 lg:mb-0'>
           <Link to='/create'>🎉 Create my event</Link>
         </Button>
       </div>
